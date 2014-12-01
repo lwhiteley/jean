@@ -1,0 +1,3 @@
+general:
+  artifacts:
+    - ".reports/" # relative to the build directory
