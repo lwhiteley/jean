@@ -9,6 +9,7 @@ var _ = require('lodash'),
 	passport = require('passport'),
 	User = mongoose.model('User');
 
+var jwtUtil = require('../../util/jwtAuth');
 /**
  * Update user details
  */
@@ -18,7 +19,7 @@ exports.update = function(req, res) {
 	var message = null;
 
 	// For security measurement we remove the roles from the req.body object
-	delete req.body.roles;
+	req.body = _.omit(req.body, ['roles']);
 
 	if (user) {
 		// Merge existing user
@@ -36,6 +37,8 @@ exports.update = function(req, res) {
 					if (err) {
 						res.status(400).send(err);
 					} else {
+						user = jwtUtil.filterUserSensitiveData(req.user,
+							['password', 'salt', 'iat', 'exp', 'aud', 'iss']);
 						res.jsonp(user);
 					}
 				});
@@ -52,12 +55,10 @@ exports.update = function(req, res) {
  * Send User
  */
 exports.me = function(req, res) {
-	//console.log(req.connection.remoteAddress);
-	if(_.isObject(req.user)){
-		var user = _.omit(req.user, ['password', 'salt', 'iat', 'exp', 'aud', 'iss']);
-		res.jsonp(user || null);
-	}
-	res.jsonp(null);
+	var user = jwtUtil.filterUserSensitiveData(req.user,
+																		['password', 'salt', 'iat', 'exp', 'aud', 'iss']);
+
+	res.jsonp(user);
 };
 
 exports.getUserByID = function(id){

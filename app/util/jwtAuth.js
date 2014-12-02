@@ -18,3 +18,11 @@ module.exports.createSendToken = function (req, res) {
   };
   res.status(200).send(responsePayload);
 };
+
+module.exports.filterUserSensitiveData = function(user, fields){
+  if(_.isObject(user) && _.isArray(fields)){
+    var filteredUser = _.omit(user, fields);
+    return filteredUser;
+  }
+  return user;
+};

@@ -12,13 +12,6 @@ var _ = require('lodash'),
 
 var jwtUtil = require('../../util/jwtAuth');
 
-var filterUserSensitiveData = function(user){
-	if(_.isObject(user)){
-		var filteredUser = _.omit(user, ['password', 'salt']);
-		return filteredUser;
-	}
-	return user;
-};
 
 /**
  * Signup
@@ -43,7 +36,7 @@ exports.signup = function(req, res) {
 			});
 		} else {
 			// Remove sensitive data before login
-			user = filterUserSensitiveData(user);
+			user = jwtUtil.filterUserSensitiveData(user, ['password', 'salt']);
 
 			req.login(user, function(err) {
 				if (err) {
@@ -66,7 +59,7 @@ exports.signin = function(req, res, next) {
 			res.status(400).send(info);
 		} else {
 			// Remove sensitive data before login
-			user = filterUserSensitiveData(user);
+			user = jwtUtil.filterUserSensitiveData(user, ['password', 'salt']);
 
 			req.login(user, function(err) {
 				if (err) {
