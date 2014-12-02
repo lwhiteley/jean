@@ -3,10 +3,10 @@
   "description": "JWT, Express, API using Node.js",
   "version": "0.1.1",
   "private": false,
-  "author": "https://github.com/lwhiteley/jean/graphs/contributors",
+  "author": "https://github.com/medullan/jean/graphs/contributors",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lwhiteley/jean.git"
+    "url": "https://github.com/medullan/jean.git"
   },
   "engines": {
     "node": "0.10.x",
