@@ -1,7 +1,12 @@
-<a name="0.1.0"></a>
-## 0.1.0 (2014-12-01)
+<a name="0.1.1"></a>
+### 0.1.1 (2014-12-01)
+
+
+#### Bug Fixes
+
+* remove unused npm modules ([80c6e6ad](https://github.com/medullan/jean/commit/80c6e6ad654c790428dabfa1ae953c3cff36389d))
 
 
 #### Features
 
-* add initial files for JEAN API ([2875dd59](https://github.com/medullan/jean/commit/2875dd59e6b2ecd0d3eaba268d18bc54f0f32af6))
+* add initial files for JEAN API ([60ed6345](https://github.com/medullan/jean/commit/60ed6345d8d824bbeb6b43d8966f75c6ab3724cd))

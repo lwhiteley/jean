@@ -144,9 +144,9 @@ module.exports = function(grunt) {
   grunt.registerTask('docs', ['clean:docs', 'concurrent:docs' ]);
 
   //release
-  grunt.registerTask('pre-release', ['bump:prerelease']);
-  grunt.registerTask('patch-release', ['bump']);
-  grunt.registerTask('minor-release', ['bump:minor']);
-  grunt.registerTask('major-release', ['bump:major']);
+  grunt.registerTask('pre-release', ['changelog', 'bump:prerelease']);
+  grunt.registerTask('patch-release', ['changelog', 'bump']);
+  grunt.registerTask('minor-release', ['changelog', 'bump:minor']);
+  grunt.registerTask('major-release', ['changelog', 'bump:major']);
 
 };
