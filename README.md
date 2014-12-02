@@ -23,7 +23,7 @@ There are several ways you can get the JEAN.JS boilerplate:
 ### Cloning The GitHub Repository
 You can also use Git to directly clone the JEAN.JS repository:
 ```bash
-$ git clone https://github.com/medullan/jean.git meanjs
+$ git clone https://github.com/medullan/jean.git
 ```
 This will clone the latest version of the JEAN.JS repository to a **jean** folder.
 
