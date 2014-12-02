@@ -1,7 +1,7 @@
 {
   "name": "jeanjs",
   "description": "JWT, Express, API using Node.js",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": false,
   "author": "https://github.com/lwhiteley/jean/graphs/contributors",
   "repository": {
