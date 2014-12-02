@@ -1,7 +1,7 @@
 JEAN.JS (JWT Express API using Nodejs)
 =========
 
-[![Circle CI](https://circleci.com/gh/lwhiteley/jean.svg?style=svg)](https://circleci.com/gh/lwhiteley/jean)
+[![Circle CI](https://circleci.com/gh/medullan/jean.svg?style=svg)](https://circleci.com/gh/medullan/jean)
 
 This is a Nodejs API template modelled from the meanjs full stack.
 
@@ -23,7 +23,7 @@ There are several ways you can get the JEAN.JS boilerplate:
 ### Cloning The GitHub Repository
 You can also use Git to directly clone the JEAN.JS repository:
 ```bash
-$ git clone https://github.com/medullan/jean.git meanjs
+$ git clone https://github.com/medullan/jean.git
 ```
 This will clone the latest version of the JEAN.JS repository to a **jean** folder.
 
