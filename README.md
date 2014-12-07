@@ -56,4 +56,9 @@ Your application should run on the 3000 port so in your browser just go to [http
 
 That's it! your application should be running by now.
 
+
+## Sample UI Application
+View [JEAN-UI](https://github.com/medullan/jean-ui), a sample ui application that connects to this api
+
 ============
+Compiled by the Medullan Automation Team
