@@ -14,7 +14,8 @@ module.exports.createSendToken = function (req, res) {
   var token = jwt.sign(filteredUser, config.sessionSecret, options);
 
   var responsePayload = {
-    token: token
+    token: token,
+    user: filteredUser
   };
   res.status(200).send(responsePayload);
 };

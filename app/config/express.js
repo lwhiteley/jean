@@ -5,6 +5,7 @@
  */
 var express = require('express'),
 	bodyParser = require('body-parser'),
+	cors = require('cors'),
 	compress = require('compression'),
 	methodOverride = require('method-override'),
 	helmet = require('helmet'),
@@ -96,6 +97,7 @@ module.exports = function(db) {
 
 		next();
 	});
+	app.use(cors());
 
 	// connect flash for flash messages
 

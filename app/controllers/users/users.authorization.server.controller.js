@@ -5,8 +5,6 @@
  */
 var config = require('../../config/config');
 var jwtUtil = require('../../util/jwtAuth');
-// var jwt = require('jsonwebtoken');
-var jwt = require('jwt-simple');
 var _ = require('lodash'),
 	mongoose = require('mongoose'),
 	User = mongoose.model('User');
