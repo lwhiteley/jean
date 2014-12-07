@@ -71,10 +71,6 @@ module.exports = function(grunt) {
       dev: {
         NODE_ENV: 'development',
         COVERAGE: 'true'
-      },
-      localdev: {
-        NODE_ENV: 'development',
-        PORT: 4000
       }
     },
     clean: {
@@ -126,7 +122,6 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['lint', 'concurrent:default']);
-  grunt.registerTask('serve', ['env:localdev', 'lint', 'concurrent:default']);
 
   // Debug task.
   grunt.registerTask('debug', ['lint', 'concurrent:debug']);
