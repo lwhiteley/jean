@@ -126,15 +126,15 @@ module.exports = function(db) {
 		// Log it
 		console.error(err.stack);
 
-		// Error page
-		res.status(500).render('500', {
-			error: err.stack
+		// Error object
+		res.status(500).jsonp({
+			error: err
 		});
 	});
 
 	// Assume 404 since no middleware responded
 	app.use(function(req, res) {
-		res.status(404).render('404', {
+		res.status(404).jsonp({
 			url: req.originalUrl,
 			error: 'Not Found'
 		});
