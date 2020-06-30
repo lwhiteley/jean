@@ -24,7 +24,7 @@
     "consolidate": "~0.10.0",
     "cors": "^2.5.2",
     "express": "~4.7.2",
-    "express-jwt": "^0.5.1",
+    "express-jwt": "^6.0.0",
     "express-session": "~1.7.2",
     "forever": "~0.11.0",
     "glob": "~4.0.6",
